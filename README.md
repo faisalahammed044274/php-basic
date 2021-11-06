@@ -5,31 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Course Overview</title>
-    <style>
-      body {
-        background-color: rgb(142, 142, 238);
-        color: honeydew;
-      }
-      h1,
-      h3 {
-        color: rgb(142, 142, 238);
-      }
-      .course-overview {
-        float: right;
-        margin: 5%;
-        padding: 15px;
-        width: 90%;
-        float: left;
-        border-radius: 9px;
-        background-color: cornsilk;
-        color: darkgreen;
-      }
-      .logo {
-        margin: auto;
-        width: 20%;
-        padding: 10px;
-      }
-    </style>
   </head>
   <body>
     <div class="logo"><img src="img/php-logo.svg" alt="phplogo" /></div>
