@@ -11,27 +11,43 @@
 
         Overview :
 
-    Explain what is PHP
-    And why you should learn
-    Download and Setup : (Editor, Server)
-    Output "Hello World !"
-    Comments
-    Variables and Data Types
-    Number / String Functions
-    Array, array functions
-    conditions (if-else, elseif, switch)
-    Loops(while, do while, for)
-    Functions
-    Includuing files
-    Working with file system
-    OOP
-    CURL
-    Product Crud(Bad, Better, and good code)
-        Superglobals($_GET,$_POST, $_FILES)
-        Form Validations
-        Uploading Image
-        Working with file
-        MySQL
-    Namespaces, Autoloading & Composer
-    Custom Router(MVC Framework)
-    Session, Cookies
+- What is PHP and why you should learn it?
+- Setup working environment
+- PHP Syntax
+- Comments
+- Variables
+- Numbers
+- Strings
+- Arrays
+- Associative Arrays
+- Conditionals (If-else, switch)
+- Loops
+- Functions
+- Dates
+- Including files
+- Working with File System
+- OOP
+- cURL
+- Start working on Products CRUD (bad version)
+- Setup connection to database
+- Select & display products from MySql
+- Products CRUD: Creating Product functionality
+- $_GET & $_POST
+- Save data in MySql
+- Form Validation
+- Uploading Image
+- Delete Product
+- Update Product
+- Product Search
+- Improve Products CRUD: Code refactoring
+- Namespaces & Autoloading with composer
+- Install packages using composer
+- MVC Framework with Custom Routing
+- MVC Controllers
+- MVC Views
+- MVC Models
+- Setup Apache Virtual Hosts
+- Sessions
+- Cookies
+    
+============================    [--  Faisal Ahammed 044274 --]   ========================================================
