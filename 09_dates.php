@@ -14,4 +14,6 @@ var_dump($parsedDate);
 // Parse date from format: https://www.php.net/manual/en/function.date-parse-from-format.php
 $dateString = 'February 3 2021';
 $parsedDate = date_parse_from_format('F j Y H:i:s',$dateString);
+echo '<pre>';
 var_dump($parsedDate);
+echo '</pre>';
