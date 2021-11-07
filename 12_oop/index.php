@@ -1,32 +1,33 @@
 <?php
 
 // What is class and instance
-class Person{
-    public $fullname;
+require_once "person.php";
+require_once "student.php";
 
-    public $surname;
+$student = new Student("Brad", "Hussy", 4);
 
-    public $age;
-}
+$p = new Person("Faisal", "Setu");
+$p->setAge(30);
 
-$p = new Person();
 var_dump($p);
+echo $p->getAge();
 
-$p->fullname = "Faisal Ahammed";
-$p->surname = "Setu";
-$p->age = 28;
-$p2= new person('Faisal', 'Ahammed', 'Setu');
-var_dump($p);
 
-echo $p->fullname . '<br>';
-echo $p->surname . '<br>';
-echo $p->age . '<br>';
+$p2 = new Person("Araf", "uddin");
 
-echo $p2->fullname . '<br>';
-echo $p2->surname . '<br>';
-echo $p2->age . '<br>';
+var_dump($p2);
+// echo Person::$counter;
+echo Person::getCounter();
 
-echo "Hello, My Full name is $p->fullname, surname is $p->surname and my age is $p->age.  ";
+var_dump($student);
+
+
+
+
+
+
+
+
 // Create Person class in Person.php
 
 // Create instance of Person
