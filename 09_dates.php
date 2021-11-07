@@ -9,5 +9,9 @@ echo date ('F j Y, H:i:s') . "<br>";
 // Print current timestamp
 echo time(). "<br>";
 // Parse date: https://www.php.net/manual/en/function.date-parse.php
-
+$parsedDate = date_parse('2021-11-07 05:30:00');
+var_dump($parsedDate);
 // Parse date from format: https://www.php.net/manual/en/function.date-parse-from-format.php
+$dateString = 'February 3 2021';
+$parsedDate = date_parse_from_format('F j Y H:i:s',$dateString);
+var_dump($parsedDate);
