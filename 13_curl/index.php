@@ -1,6 +1,6 @@
 <?php
 
-$url = 'https://jsonplaceholder.typicode.com/users';
+// $url = 'https://jsonplaceholder.typicode.com/users';
 
 // Sample example to get data.
 
@@ -22,24 +22,24 @@ $url = 'https://jsonplaceholder.typicode.com/users';
 
 // Post request
 
-$resource =curl_init();
-$user = [
-    'name' => 'Faisal Ahammed',
-    'username' => 'setufaisal',
-    'email' => 'setu@example.com'
-];
-curl_setopt($resource, $user[
-    CURLOPT_URL => $url,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POST => true,
-    CURLOPT_HTTPHEADER =>['content-type : application'],
-    CURLOPT_POSTFIELDS => json_encode($user)
-]);
+// $resource =curl_init();
+// $user = [
+//     'name' => 'Faisal Ahammed',
+//     'username' => 'setufaisal',
+//     'email' => 'setu@example.com'
+// ];
+// curl_setopt($resource, $user, $url [
+//     CURLOPT_URL => $url,
+//     CURLOPT_RETURNTRANSFER => true,
+//     CURLOPT_POST => true,
+//     CURLOPT_HTTPHEADER =>['content-type : application'],
+//     CURLOPT_POSTFIELDS => json_encode($user)
+// ]);
 
-$result = curl_exec($resource);
+// $result = curl_exec($resource);
 
-curl_close($resource);
-echo $result;
+// curl_close($resource);
+// echo $result;
 
 
 ?>
