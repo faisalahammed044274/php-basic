@@ -12,9 +12,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $price = ($_POST['price']);
     $date = date('Y-m-d H:i:s');
 
-    if(!$title) {
-       $errors
-    }
+    // if(!$title) {
+    //    $errors
+    // }
 
     $statement = $pdo->prepare("INSERT INTO product(title, image, description, price, create_date)
     VALUES(:title, :image, :description, :price, :date)");
