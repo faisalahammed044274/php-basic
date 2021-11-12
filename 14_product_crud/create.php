@@ -2,6 +2,7 @@
 
 $pdo = new PDO('mysql:host=localhost; port=3306;dbname=product_crud', 'root', '');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$errors = [];
 
 // var_dump($_SERVER);
 // exit();
@@ -12,19 +13,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $price = ($_POST['price']);
     $date = date('Y-m-d H:i:s');
 
-    // if(!$title) {
-    //    $errors
-    // }
+    if (!$title) {
+        $errors[] = 'Product title is required';
+    }
 
-    $statement = $pdo->prepare("INSERT INTO product(title, image, description, price, create_date)
+    if (!$price) {
+        $errors[] = 'Product price is required';
+    }
+
+    if (empty($erros)) {
+        $statement = $pdo->prepare("INSERT INTO product(title, image, description, price, create_date)
     VALUES(:title, :image, :description, :price, :date)");
 
-    $statement->bindValue(':title', $title);
-    $statement->bindValue(':image', '');
-    $statement->bindValue(':description', $description);
-    $statement->bindValue(':price', $price);
-    $statement->bindValue(':date', $date);
-    $statement->execute();
+        $statement->bindValue(':title', $title);
+        $statement->bindValue(':image', '');
+        $statement->bindValue(':description', $description);
+        $statement->bindValue(':price', $price);
+        $statement->bindValue(':date', $date);
+        $statement->execute();
+    }
 }
 
 ?>
@@ -54,7 +61,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h1>Create New Product</h1>
   </center>
 
-div.alert.alert-danger
+  <?php if (!empty($errors)): ?>
+    <div class="alert alert-danger">
+      <?php foreach ($errors as $error): ?>
+        <div><?php echo $error ?></div>
+      <?php endforeach;?>
+    </div>
+  <?php endif;?>
 
   <a href="index.php" class="btn btn-success" style="margin: 30px;">View Product</a>
 
